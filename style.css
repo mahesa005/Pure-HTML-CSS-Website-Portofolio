@@ -1,0 +1,173 @@
+/* Font: alata */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #F0EDEE;
+    font-family: 'Alata', Arial, Helvetica, sans-serif;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 56px;
+    padding-right: 32px;
+    padding-left: -10px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #F0EDEE;
+    font-size: 16px;
+    border: 4px solid transparent;
+    border-width: 8px;
+
+}
+
+nav ul a:hover {
+    background-color: #F0EDEE;
+    opacity: 100%;
+    color: #0A090C;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #0A090C;
+    margin-top: 10px;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    opacity: 90%;
+}
+
+.circle {
+    max-width: 480px;
+    max-height: 480px;
+    min-width: 240px;
+    max-height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+.circle #profpic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+main {
+    margin-top: 100px;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+#hero-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+section {
+    padding-inline: 80px;
+    padding-block: 80px;
+}
+
+#hero-title, #hero-subtitle {
+    margin-block: 0;
+}
+
+#hero-title {
+    font-size: 76px;
+}
+
+#hero-subtitle {
+    font-size: 36px;
+    color: #d36318;
+}
+
+button {
+    padding-inline: 24px;
+    padding-block: 16px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-family: 'Alata', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    gap: 12px;
+}
+
+p {
+    font-size: 16px;
+}
+
+#hero-p {
+    text-wrap: wrap;
+    max-width: 800px;
+    font-size: 20px;
+}
+
+#contact-button {
+    background-color: #2C666E;
+    color: #F0EDEE;
+}
+
+#cv-button {
+    background-color: #F0EDEE;
+    border: 2px solid;
+    color:  #2C666E;
+    border-color: #2C666E;
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    opacity: 90%;
+    color: #0A090C;
+}
+
+.about-container {
+    display: flex;
+}
+
+footer {
+    display: flex;
+    background-color: #0A090C;
+    color: #F0EDEE;
+    opacity: 90%;
+    justify-content: center;
+}
+
+#footer-links ul {
+    display: flex;
+    gap: 28px;
+
+}
+
+#footer-content {
+    display: flex;
+    gap: 64px;
+}
