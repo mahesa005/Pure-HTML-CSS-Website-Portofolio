@@ -30,7 +30,7 @@ footer ul {
   font-size: 20px;
 }
 
-.experience-description li::before {
+.experience-description li::active {
   content: ">";    
   position: absolute;
   left: 0;
@@ -55,16 +55,17 @@ a {
     color: #F0EDEE;
 }
 
-#contact-button a::before {
-    color: #F0EDEE;
+#contact-button a {
+    color: inherit;       
+    
 }
 
 #cv-button a:visited {
     color: #2C666E;
 }
 
-#cv-button a:before {
-    color: #2C666E;
+#cv-button a {
+    color: inherit
 }
 
 
@@ -299,13 +300,17 @@ footer {
 }
 
 #experience {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 91%;
+    width: 100%;
+    max-width: screen; 
+    margin: 0 auto;
     overflow-y: auto;
+    overflow-x: hidden;
     height: 600px;
+    margin-inline: 0;
+    
 }
+
+.experience-cards > * { min-width: 0; }
 
 .scroll-box {
     display: flex;
@@ -324,13 +329,13 @@ footer {
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  background-color: #d36318;
+  background-color: #d36318;;
   color: #F0EDEE;
   border-radius: 20px;
   padding: 32px 40px;     
   min-height: 160px;      
   width: 95%;             
-  max-width: 2000px;      
+  max-width: 1400px;      
   opacity: 95%;
   box-shadow: 0 12px 28px rgba(0,0,0,0.25);
   transform: scale(1);
@@ -368,7 +373,7 @@ footer {
 
 .job-period {
     font-style: italic;
-}
+} 
 
 .experience-description p {
     text-align: justify;
@@ -376,6 +381,12 @@ footer {
     font-size: 18px;
     flex-shrink: 0;
 }
+
+section { 
+  box-sizing: border-box;
+  padding-inline: clamp(16px, 6vw, 80px);
+}
+
 
 .sbox-title h1 {
     font-size: 64px;
@@ -389,3 +400,4 @@ footer {
     border: 1px solid;
     box-shadow: 0 12px 28px rgba(0,0,0,0.25);
 }
+
