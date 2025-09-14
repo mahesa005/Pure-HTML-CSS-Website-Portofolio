@@ -1,5 +1,7 @@
 /* Font: alata */
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url(assets/left-arrow.png);
+@import url(assets/right-arrow.png);
 
 html {
     scroll-behavior: smooth;
@@ -140,7 +142,6 @@ main {
 }
 
 section {
-    padding-inline: 80px;
     padding-block: 80px;
 }
 
@@ -257,7 +258,7 @@ p {
 }
 
 #about-p:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -340,7 +341,7 @@ footer {
   box-shadow: 0 12px 28px rgba(0,0,0,0.25);
   transform: scale(1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: -1;
+  z-index: 0;
 }
 
 .experience-cards:hover {
@@ -400,5 +401,75 @@ section {
     color: #d36318;
     border: 1px solid;
     box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel {
+    margin: 3em auto;
+    display: flex;
+    gap: 16em;
+    overflow-x: auto;
+    width: 84%;
+    border-radius: 8px;
+    scroll-snap-type: x mandatory; /*Creates snap effect*/
+    scroll-behavior: smooth;
+}
+
+.carousel-card {
+  display: flex;
+  flex: 1 0 100%;
+  flex-direction: column;
+  justify-content: center;    
+  align-items: center;        
+  gap: clamp(8px, 1.5vw, 16px);
+  flex: 0 0 clamp(260px, 50vw, 1000px);  
+  aspect-ratio: 4 / 3;                  
+  box-sizing: border-box;               
+  padding: clamp(16px, 2.5vw, 28px);
+  background-color: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  transition: transform .2s ease, box-shadow .2s ease;
+  min-width: 0;
+  scroll-snap-align: center;
+  object-fit: cover;
+}
+
+.carousel-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.carousel-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #2C666E;
+    opacity: 0.5;
+    transform: scale(1);
+    transition: opacity ease 250ms, transform ease 0.3s;
+}
+
+.carousel-nav a:hover {
+    transform: scale(1.2)
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
 }
 
